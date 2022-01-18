@@ -1,0 +1,716 @@
+		<!DOCTYPE html>
+		<html xmlns="http://www.w3.org/1999/xhtml">
+
+		<head>
+			<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+			<title>HACKER&lowbar; Top of Gaming Gear </title>
+			<link rel="shortcut icon" type="./image/x-icon" href="./image/picon.ico">
+			<meta name="author" content="Alvaro Trigo Lopez" />
+			<meta name="description" content="fullPage full-screen backgrounds." />
+			<meta name="keywords" content="fullpage,jquery,demo,screen,fullscreen,backgrounds,full-screen" />
+			<meta name="Resource-type" content="Document" />
+			<!-- 풀페이지 -->
+			<link rel="stylesheet" type="text/css" href="./css/fullpage.css" />
+			<!-- 베이스, 리셋 , 아이콘폰트 -->
+			<link href="./css/all.min.css" rel="stylesheet" type="text/css">
+			<link href="./css/reset.css" rel="stylesheet" type="text/css">
+			<link href="./css/base.css" rel="stylesheet" type="text/css">
+			<link href="./css/style.css" rel="stylesheet" type="text/css">
+			<link href="./css/swiper.css" rel="stylesheet" type="text/css">
+			<link href="./css/swiper-bundle.min.css" rel="stylesheet" type="text/css">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+			<style>
+				/* Style for our header texts
+			* --------------------------------------- */
+				h2 {
+					font-family: outfit, sans-serif;
+					font-size: 3em;
+					color: #fff;
+					margin: 0;
+					padding: 0;
+				}
+
+				/* Centered texts in each section
+			* --------------------------------------- */
+				.section {
+					text-align: center;
+				}
+
+
+				/* Backgrounds will cover all the section
+			* --------------------------------------- */
+				.section {
+					background-size: cover;
+				}
+
+				.slide {
+					background-size: contain;
+				}
+
+				/* Defining each section background and styles
+			* --------------------------------------- */
+				#section0 {
+					background-image: url("./image/main1.jpg");
+
+					-webkit-animation: zoom-b 15s linear infinite alternate;
+					/* Safari 4+ */
+					-moz-animation: zoom-b 15s linear infinite alternate;
+					/* Fx 5+ */
+					-o-animation: zoom-b 15s linear infinite alternate;
+					/* Opera 12+ */
+					animation: zoom-b 15s linear infinite alternate;
+					/* IE 10+, Fx 29+ */
+				}
+
+				@-webkit-keyframes zoom-b {
+					0% {
+						-ms-transform: scale(1, 1);
+						transform: scale(1, 1) translateZ(1px);
+					}
+
+					100% {
+						-ms-transform: scale(1.4, 1.4);
+						transform: scale(1.4, 1.4) translateZ(1px);
+					}
+				}
+
+				@-moz-keyframes zoom-b {
+					0% {
+						-ms-transform: scale(1, 1);
+						transform: scale(1, 1) translateZ(1px);
+					}
+
+					100% {
+						-ms-transform: scale(1.2, 1.2);
+						transform: scale(1.2, 1.2) translateZ(1px);
+					}
+				}
+
+				@-o-keyframes zoom-b {
+					0% {
+						-ms-transform: scale(1, 1);
+						transform: scale(1, 1) translateZ(1px);
+					}
+
+					100% {
+						-ms-transform: scale(1.2, 1.2);
+						transform: scale(1.2, 1.2) translateZ(1px);
+					}
+				}
+
+				@keyframes zoom-b {
+					0% {
+						-ms-transform: scale(1, 1);
+						transform: scale(1, 1) translateZ(1px);
+					}
+
+					100% {
+						-ms-transform: scale(1.2, 1.2);
+						transform: scale(1.2, 1.2) translateZ(1px);
+					}
+				}
+
+				#section2 {
+					background-image: url(image/s2.jpg);
+					padding: 6% 0 0 0;
+
+				}
+
+				#section3 {
+					background-image: url(image/s3.jpg);
+					padding: 6% 0 0 0;
+				}
+
+				#section4 {
+					background-image: url('./image/s4.jpg');
+					padding: 6% 0 0 0;
+				}
+
+				#section5 {
+					background-image: url(image/footer1700.jpg);
+					filter: brightness(1.1);
+					padding: 6% 0 0 0;
+				}
+
+				#section1 {
+					background: #000;
+				}
+
+				/*Adding background for the slides
+			* --------------------------------------- */
+				#slide1 {
+					background-image: url('./image/s1.jpg');
+					padding: 6% 0 0 0;
+					background-size: contain;
+					background-repeat: no-repeat;
+					background-position: top;
+				}
+
+				#slide2 {
+					background-image: url(./image/slide2.jpg);
+					padding: 6% 0 0 0;
+					background-repeat: no-repeat;
+					background-position: top;
+				}
+
+				#slide3 {
+					background-image: url(./image/slide3.jpg);
+					padding: 6% 0 0 0;
+					background-repeat: no-repeat;
+					background-position: top;
+				}
+
+				/* .fp-auto-height h1{height:900px !important;} */
+				/* Bottom menu
+			* --------------------------------------- */
+				#menu {
+					position: absolute;
+					top: 29px;
+					right: 100px;
+					display: flex;
+					width: 100%;
+					justify-content: space-evenly;
+				}
+
+
+
+				/* 스와이퍼 슬라이드!! */
+				.swiper {
+					width: 100%;
+					padding-top: 50px;
+					padding-bottom: 50px;
+				}
+
+				.swiper-slide {
+					background-position: center;
+					background-size: cover;
+					width: 400px;
+					height: 400px;
+					position: relative;
+				}
+
+				.swiper-slide>.pro_txt {
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 100%;
+					height: 100%;
+					background-color: rgba(0, 0, 0, 0.5);
+					transition: 0.6s;
+					opacity: 0;
+				}
+
+				.pro_txt .btn {
+					color: #fff;
+					border: 1px solid #fff;
+					margin-top: 150px;
+				}
+
+				.pro_txt .btn:hover {
+					color: #fff;
+					border: 1px solid rgb(13, 3, 99);
+					background-color: rgb(13, 3, 99);
+				}
+
+				.swiper-slide:hover .pro_txt {
+					opacity: 1;
+				}
+
+				.swiper-slide img {
+					display: block;
+					width: 100%;
+				}
+
+				/* 실험실험 */
+				/* 실험실험 */
+				/* 실험실험 */
+				.on {
+					transform: translateX(50px) !important;
+				}
+
+				.on1 {
+					transform: translateX(500px) !important;
+					opacity: 1 !important;
+				}
+
+				.line {
+					color: rgb(255, 51, 15) !important;
+				}
+
+				/* 실험실험 */
+			</style>
+
+			<script src="./script/prefixfree.min.js"></script>
+			<!-- 제이쿼리 -->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+			<script>
+				$(document).ready(function () {
+
+					let menu = $('#section4 > ul > li > a');
+
+					menu.click(function () {
+						$(this).next().slideToggle();
+						$(this).find('i').toggleClass('act');
+						$(this).toggleClass('act1');
+					});
+
+					let m = $('.move');
+					m.mouseenter(function () {
+						$(this).animate({
+							'top': '-200px'
+						}, 500);
+						// alert('테스트');
+					});
+					m.mouseleave(function () {
+						$(this).animate({
+							'top': '0px'
+						}, 500);
+					});
+
+				});
+			</script>
+
+		</head>
+
+		<body>
+
+
+			<div id="fullpage">
+				<div class="section " id="section0">
+					<header>
+						<nav>
+							<ul id="menu">
+								<li>
+									<h1><a href="index.html" title="첫페이지로이동">
+											<img src="./image/logo.png" alt="로고"></a></h1>
+								</li>
+								<li data-menuanchor="anchor1"><a href="#anchor1" class="line">WE are HACKER</a></li>
+								<li data-menuanchor="anchor2"><a href="#anchor2">It&#39;s NEW</a></li>
+								<li data-menuanchor="anchor3"><a href="#anchor3">EVENT</a></li>
+								<li data-menuanchor="anchor4"><a href="#anchor4">PRODUCTS</a></li>
+								<li data-menuanchor="anchor5"><a href="#anchor5">FAQ</a></li>
+							</ul>
+						</nav>
+					</header>
+					<div id="store">
+						<a href="http://naver.com" title="공식 스토어 바로가기"><img src="image/shop2.png" alt="쇼핑몰바로가기아이콘">
+							H&#45;store</a>
+					</div>
+					<p class="s0">The gate of your victory </p>
+					<h2>
+						<span class="move">H</span>
+						<span class="move">A</span>
+						<span class="move">C</span>
+						<span class="move">K</span>
+						<span class="move">E</span>
+						<span class="move">R</span>
+					</h2>
+					<P class="s0txt">게이밍 기어 전문 브랜드 HACKER는 강력한 성능과 세련된 디자인,<BR> 합리적인 가격을 무기로 당신의 승리를 책임집니다.</P>
+					<div id="scroll_wrap">
+						<p>Scroll Down</p>
+						<div id="scroll">
+							<div id="box04"></div>
+						</div>
+					</div>
+
+				</div>
+						<!-- 섹션1 슬라이드 -->
+				<div class="section" id="section1" data-auto="true">
+					<div class="slide" id="slide1"><a href="sub.html" title="상세페이지로이동" class="s1_txt">Do you want play with&#63;</a>
+					</div>
+					<div class="slide" id="slide2">
+						<h2><a href="sub.html" title="자세히 보기">자세히 보기</a></h2>
+					</div>
+					<div class="slide" id="slide3">
+						<h2><a href="sub.html" title="자세히 보기">자세히 보기</a></h2>
+					</div>
+				</div>
+						<!-- 섹션2 이벤트 -->
+				<div class="section" id="section2">
+					<h2>EVENT</h2>
+					<ul>
+						<li><a href="sub.html" title="스토어로 이동"><img src="./image/event1.jpg" alt="30프로할인이미지"></a>
+							<p><i class="fas fa-gift"></i><br>
+								KM700 SET 프로모션 &#x0023;1</p>
+							<h3>BEST REVIEW 300분께</h3>
+							<P>KL556 헤드셋&#40;출고가&#x003A;89000원&#41;을 드립니다</P>
+							<P>여러분의 리얼 사용후기를 남겨주세요</P>
+							<a href="sub.html" title="스토어로 이동" class="btn">스토어로 이동</a>
+						</li>
+						<li><a href="sub.html" title="스토어로 이동"><img src="./image/event2.JPG" alt="30프로할인이미지"></a>
+							<p><i class="fas fa-gift"></i><br>
+								KM700 SET 프로모션 &#35;2</p>
+							<h3>출시기념 SPECIAL 30&#37; 할인</h3>
+							<P>키보드 &#43; 마우스 &#43; 데스크 패드를
+							</P>
+							<P>무려 63000원 절약한 147000원에</P>
+							<a href="sub.html" title="스토어로 이동" class="btn">스토어로 이동</a>
+						</li>
+						<li><a href="sub.html" title="스토어로 이동"><img src="./image/event3.jpg" alt="30프로할인이미지"></a>
+							<p><i class="fas fa-gift"></i><br>
+								KM700 SET 프로모션 &#35;3</p>
+							<h3>INSTAGRAM 홍보 이벤트</h3>
+							<P>KM700 체험단에 응모해보세요</P>
+							<P>공식 계정 팔로우 후 DM 발송하면 신청완료&#33;</P>
+							<a href="sub.html" title="인스타그램 계정으로 이동" class="btn">공식 인스타그램 이동</a>
+						</li>
+					</ul>
+				</div>
+						<!-- 섹션3 이전상품갤러리-->
+				<div class="section" id="section3">
+					<h2>PRODUCTS
+						<span>최고의 가성비를 자랑하는 HACKER의 다양한 상품들을 만나보세요</span></h2>
+					<div class="swiper mySwiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img src="./image/pro1.jpg" alt="헤드셋사진">
+								<div class="pro_txt"><a href="sub.html" title="상세 SPEC 확인하기" class="btn">상세 SPEC 확인하기</a></div>
+							</div>
+							<div class="swiper-slide">
+								<img src="./image/pro2.jpg" alt="데스크사진1">
+								<div class="pro_txt"><a href="sub.html" title="상세 SPEC 확인하기" class="btn">상세 SPEC 확인하기</a></div>
+							</div>
+							<div class="swiper-slide">
+								<img src="./image/pro3.jpg" alt="게이밍의자사진1">
+								<div class="pro_txt"><a href="sub.html" title="상세 SPEC 확인하기" class="btn">상세 SPEC 확인하기</a></div>
+							</div>
+							<div class="swiper-slide">
+								<img src="./image/pro4.jpg" alt="키보드사진">
+								<div class="pro_txt"><a href="sub.html" title="상세 SPEC 확인하기" class="btn">상세 SPEC 확인하기</a></div>
+							</div>
+							<div class="swiper-slide">
+								<img src="./image/pro5.jpg" alt="마우스사진">
+								<div class="pro_txt"><a href="sub.html" title="상세 SPEC 확인하기" class="btn">상세 SPEC 확인하기</a></div>
+							</div>
+							<div class="swiper-slide">
+								<img src="./image/pro6.jpg" alt="헤드셋사진1">
+								<div class="pro_txt"><a href="sub.html" title="상세 SPEC 확인하기" class="btn">상세 SPEC 확인하기</a></div>
+							</div>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+									<!-- 섹션4 FAQ-->
+				<div class="section" id="section4">	<!-- fp-auto-height -->
+					<h2>F A Q</h2>
+					<ul>
+						<li><a href="#" title="질문">&#91;A&#47;S문의&#93;무상 AS기간은 몇 년 입니까&#63;<i class="fas fa-angle-down"></i></a>
+							<p>무상 AS 기간은 정식 유통경로가 확인되는 당사 제품에 한해 1년 제공되고 있으며 일부 제품은 2년까지 제공됩니다&#46; 당사 AS규정에 대한 정확한 정보는 하단의 링크에서
+								확인하실 수 있습니다&#46;
+								<a href="sub.html" title="자세히보기" class="btn">자세히보기 <i class="fas fa-angle-right"></i></a>
+							</p>
+						</li>
+						<li><a href="#" title="질문">&#91;A&#47;S문의&#93; 방문할 수 있는 AS대리점이 있나요&#63;<i
+									class="fas fa-angle-down"></i></a>
+							<p>본사 내부에 위치한 내방센터를 통해 A&#47;S접수처리가 가능합니다&#46;
+
+								내방 주소&#58; 서울 강서구 마곡중앙1로 20&#44; M시그니처 7층
+
+								내방센터 업무시간&#58; 오전 9시 30분 &#126; 오후 5시 &#40;12시부터 1시 점심시간&#41;
+
+								&#8251; 내방센터 에서는 단순접수처리 까지만 가능하시며&#44; AS처리 후 내방수령 또는 택배수령으로 처리가 가능합니다&#46;
+								AS규정에 대한 정확한 정보는 하단의 링크에서 확인하실 수 있습니다&#46;
+								<a href="sub.html" title="자세히보기" class="btn">자세히보기 <i class="fas fa-angle-right"></i></a>
+							</p>
+						</li>
+						<li><a href="#" title="질문">&#91;키보드&#93;QK660&#47;K8700 광축 시리즈 CMOS 진입불가 증상<i
+									class="fas fa-angle-down"></i></a>
+							<p>QCMOS 진입 불가&#44; 전원 인가시 PC 부팅 불가 등의 증상이 발생하는 경우 키보드 펌웨어를 다운로드 받으신 뒤 업데이트 후 사용을 부탁드립니다&#46;
+
+								펌웨어 업데이트 이후 동일증상이 발생하는 경우 당사 고객센터로 연락을 부탁드립니다&#46;
+
+								본 펌웨어는 최신 펌웨어가 아니며&#44; 키보드에 이상이 없는 경우 업데이트 진행은 권장하지 않습니다&#46;
+
+								또한&#44; 안내드린 K660&#44; K8700 이외 모델에 적용되어 나타나는 모든 문제는 자사에서 책임지지 않습니다&#46;
+								<a href="http://gofile.me/5HRbA/rwm0en8uX" title="자세히보기" class="btn">다운로드 링크 <i class="fas fa-angle-right"></i></a>
+
+							</p>
+						</li>
+						<li><a href="#" title="질문">&#91;키보드&#93; 한&#47;영 키가 변환되지 않습니다&#46;<i class="fas fa-angle-down"></i></a>
+							<p>Alt 한영전환 &#91;한영전환 안될경우 설치 해주세요&#93;
+
+								키보드 우측 Alt&#44; Ctrl 버튼을 각각 한영&#44; 한자로 사용해주는 레지스트리 입니다&#46; 우측 Alt&#44; Ctrl 로 각각 한영&#44; 한자 변환이 가능합니다&#46;
+								설치 후 우측 Alt&#44; Ctrl의 기능은 동작하지 않습니다&#46;
+
+								&#45; 설치방법 1&#46; 압축파일 풀어서 폴더안에 있는 프로그램을 설치 해주신 후 재부팅을 하시면 한/영 전환 사용이 가능 합니다
+								<a href="http://gofile.me/5HRbA/tOaj1Tj8k" title="자세히보기" class="btn">다운로드 링크 <i class="fas fa-angle-right"></i></a>
+							</p>
+						</li>
+						<li><a href="#" title="질문"> &#91;키보드&#93; 파워 서플라이 테스트 방법<i class="fas fa-angle-down"></i></a>
+							<p>파워서플라이 자가 테스트 진행한 블로그 링크입니다&#46;<a href="http://cdmanii.com/954" title="자세히보기" class="btn">다운로드 링크 <i
+										class="fas fa-angle-right"></i></a>
+								이후에도 정상적인 사용이 어려우신 경우 고객센터로 입고 부탁드립니다&#46;
+
+								택배 주소 &#58; 경기도 김포시 양촌읍 황금4로 94
+								방문 주소 &#58; 서울특별시 강서구 마곡중앙1로 20&#44; M시그니처 7층
+
+								감사합니다&#46;</p>
+						</li>
+						<li><a href="#" title="질문">&#91;키보드&#93; 키보드 입력 테스트 프로그램
+								<i class="fas fa-angle-down"></i></a>
+							<p>현재 사용중인 키보드 입력 테스트 프로그램입니다&#46;
+								<a href="http://gofile.me/3rRBj/8M04mdcrF" title="자세히보기" class="btn">다운로드 링크 <i class="fas fa-angle-right"></i></a>
+							</p>
+						</li>
+						<li><a href="#" title="질문">&#91;키보드&#93;기계식 키보드 스위치 교체 방법 안내 동영상<i class="fas fa-angle-down"></i></a>
+							<p>
+								스위치 분리 방법
+								<a href="https://youtu.be/AZjiV9s0ou0" title="자세히보기" class="btn">다운로드 링크 <i class="fas fa-angle-right"></i></a>
+
+								스위치 결합 방법
+								<a href="https://youtu.be/AZjiV9s0ou0F" title="자세히보기" class="btn">다운로드 링크 <i class="fas fa-angle-right"></i></a>
+
+								영상으로 안내드린 방법은 축교환식 기계식 키보드에서만 적용이 가능합니다&#46;</p>
+						</li>
+					</ul>
+					<div class="s4_2">
+						<div class="s4_box first">
+							<h3>A&#47;S 안내<br>&#45;</h3>
+							<p>고객센터 &#58; 1644&#45;1234</p>
+							<p>업무시간 &#58; 09&#58;30&#126;17&#58;00 &#40;공휴일 및 토일 휴무&#41;</p>
+							<a href="sub.html" title="자세히보기">자세히보기 <i class="fas fa-angle-double-right"></i></a>
+							<img src="./image//as.png" alt="사람 아이콘">
+						</div>
+						<div class="s4_box">
+							<h3>문의하기<br>&#45;</h3>
+							<p>여러분의 소중한 의견에 귀기울이겠습니다<br>&nbsp;</p>
+							<a href="sub.html" title="자세히보기">자세히보기 <i class="fas fa-angle-double-right"></i></a>
+							<img src="./image//question.png" alt="사람 아이콘">
+						</div>
+					</div>
+				</div>
+									<!-- 섹션5 마지막페이지-->
+				<div class="section" id="section5">
+					<h2 id="play">Play with &#38;</h2>
+					<p id="winner">Be WINNER</p>
+					<footer>
+						<nav>
+							<ol>
+								<li><a href="sub.html" title="회사소개">회사소개</a></li>
+								<li><a href="sub.html" title="인재채용">인재채용</a></li>
+								<li><a href="sub.html" title="제휴제안">제휴제안 </a></li>
+								<li><a href="sub.html" title="이용약관">이용약관 </a></li>
+								<li><a href="sub.html" title="개인정보처리방침">개인정보처리방침 </a></li>
+							</ol>
+						</nav>
+						<span class="sns">
+							<a href="http://instagram.com" title="인스타그램 계정으로 연결"><i class="fab fa-instagram"></i></a>
+							<a href="http://www.naver.com" title="네이버 계정으로 연결">N</a>
+							<a href="http://www.facebook.co.kr" title="페이스북 계정으로 연결"><i class="fab fa-facebook"></i></a>
+						</span>
+						<label for="family">
+							<select id="family" onchange="siteUrl(this)">
+								<option> Family Site</option>
+								<option value="https://www.abko.co.kr">ABKO</option>
+							</select>
+						</label>
+						<address>상호 &#58; 주식회사 앱코 대표이사 &#58; 홍길동 관리자 메일 &#58; webmaster&#64;practice&#46;co&#46;kr
+							통신판매신고 &#58; 00&#45;서울용산&#45;00 사업자 등록번호 &#58; 106&#45;86&#45;000000
+							본사 &#58; 서울특별시 강서구 마곡중앙1로 20&#44; 7층 &#40;마곡동&#41;
+							<br>
+							Copyright &copy; 2020 ABKO Co&#46; Ltd&#46; All Rights Reserved.
+						</address>
+					</footer>
+				</div>
+			</div>
+			<!-- 모달창 -->
+			<div class="modal">
+				<a href="#" title="닫기"><i class="fas fa-times"></i></a>
+				<img src="./image/modal.jpg" alt="사이트용도안내이미지">
+				<p>본사이트는상업적용도가아닌<br>개인포트폴리오용가상사이트입니다<br>출처를밝히지못한이미지가포함되어있습니다</p>
+			</div>
+
+		<!-- 스크립트 -->
+			<script type="text/javascript" src="./script/fullpage.js"></script>
+			<script type="text/javascript" src="./vendors/scrolloverflow.js"></script>
+			<script type="text/javascript" src="./script/fullpage.extensions.min.js"></script>
+			<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+			<!-- 3.x snippet:
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		2.x snippet:
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> -->
+
+			<script type="text/javascript">
+				function siteUrl(a) { //사용자가 select태그에서 option을 선택하면 값을 전달받는다
+					if (a.value != 'none') { //만약 사용자가선택목록을 선택하였을 때 아래 내용을 실행
+						window.open(a.value, ''); //사이트 연결을 실행
+						a.value = 'none'; //값을초기화
+					} else { //그렇지않으면
+						return; //실행하지않는다
+					}
+				}
+
+				var g_interval; //슬라이드 오토 변수선언!! 
+				var myFullpage = new fullpage('#fullpage', {
+					licenseKey: 'OPEN-SOURCE-GPLv3-LICENSE',
+					verticalCentered: false,
+					'css3': true,
+					//options here
+					autoScrolling: true,
+					// scrollHorizontally: true,
+					navigation: true,
+					responsiveWidth: 700,
+					keyboardScrolling: true,
+					continuousVertical: true,
+					scrollOverflow: true,
+					lockAnchors: false,
+					anchors: ['anchor1', 'anchor2', 'anchor3', 'anchor4', 'anchor5'],
+					menu: '#menu',
+					parallax: true,
+					fixedElements: '#store',
+					onLeave: function (origin, destination, direction) {
+						var loadedSection = this;
+						//Section 2 Eigenschaften
+						if (origin.index == 4 && direction == 'down') {
+							//페이지 들어가면 이동적용
+							$("#play").addClass("on");
+							$("#winner").addClass('on1');
+						} else if (origin.index == 0 && direction == 'up') {
+							//페이지 들어가면 이동적용
+							$("#play").addClass("on");
+							$("#winner").addClass('on1');
+						}
+						//페이지 벗어나면 제거하기 
+						if (origin.index == 5 && direction == 'up') {
+							$("#play").removeClass("on");
+							$("#winner").removeClass('on1');
+						}
+						if (origin.index == 5 && direction == 'down') {
+							$("#play").removeClass("on");
+							$("#winner").removeClass('on1');
+						}
+										//메뉴버튼 !!!!!!!!!!!!!!!
+						if (origin.index == 0 && direction == 'down') {
+							$('#menu li a').removeClass('line');
+							$('#menu li a').eq(2).addClass('line');
+						} else if (origin.index == 1 && direction == 'down') {
+							$('#menu li a').removeClass('line');
+							$('#menu li a').eq(3).addClass('line');
+
+							$('#section2 ul > li:first-child').animate({
+								'top': '0px'
+							}, 500);
+							$('#section2 ul > li:nth-child(2)').animate({
+								'top': '0px'
+							}, 800);
+							$('#section2 ul > li:nth-child(3)').animate({
+								'top': '0px'
+							}, 1000);
+						} else if (origin.index == 2 && direction == 'down') {
+							$('#menu li a').removeClass('line');
+							$('#menu li a').eq(4).addClass('line');
+							$('#section2 ul > li:first-child').animate({
+								'top': '400px'
+							}, 500);
+							$('#section2 ul > li:nth-child(2)').animate({
+								'top': '400px'
+							}, 800);
+							$('#section2 ul > li:nth-child(3)').animate({
+								'top': '400px'
+							}, 1000);
+						} else if (origin.index == 3 && direction == 'down') {
+							$('#menu li a').removeClass('line');
+							$('#menu li a').eq(5).addClass('line');
+						} else if (origin.index == 4 && direction == 'down') {
+							$('#menu li a').removeClass('line');
+						} else if (origin.index == 5 && direction == 'down') {
+							$('#menu li a').removeClass('line');
+							$('#menu li a').eq(1).addClass('line');
+
+						} else if (origin.index == 0 && direction == 'up') {
+							$('#menu li a').removeClass('line');
+						} else if (origin.index == 1 && direction == 'up') {
+							$('#menu li a').removeClass('line');
+							$('#menu li a').eq(1).addClass('line');
+
+						} else if (origin.index == 2 && direction == 'up') {
+							$('#menu li a').removeClass('line');
+							$('#menu li a').eq(2).addClass('line');
+							$('#section2 ul > li:first-child').animate({
+								'top': '400px'
+							}, 500);
+							$('#section2 ul > li:nth-child(2)').animate({
+								'top': '400px'
+							}, 800);
+							$('#section2 ul > li:nth-child(3)').animate({
+								'top': '400px'
+							}, 1000);
+						} else if (origin.index == 3 && direction == 'up') {
+							$('#menu li a').removeClass('line');
+							$('#menu li a').eq(3).addClass('line');
+							$('#section2 ul > li:first-child').animate({
+								'top': '0px'
+							}, 500);
+							$('#section2 ul > li:nth-child(2)').animate({
+								'top': '0px'
+							}, 800);
+							$('#section2 ul > li:nth-child(3)').animate({
+								'top': '0px'
+							}, 1000);
+						} else if (origin.index == 4 && direction == 'up') {
+							$('#menu li a').removeClass('line');
+							$('#menu li a').eq(4).addClass('line');
+						} else if (origin.index == 5 && direction == 'up') {
+							$('#menu li a').removeClass('line');
+							$('#menu li a').eq(5).addClass('line');
+
+						}
+
+					},
+
+					afterLoad: function (origin, destination, direction) {
+						clearInterval(g_interval);
+
+						// 1000 milliseconds lapse
+						const lapse = 2200;
+						const shouldAutoPlay = destination.item.hasAttribute('data-auto');
+
+						const hasSlides = destination.item.querySelectorAll('.fp-slides').length;
+
+						if (shouldAutoPlay && hasSlides) {
+							g_interval = setInterval(function () {
+								fullpage_api.moveSlideRight();
+							}, lapse);
+						}
+					}
+
+
+				});
+				//             onLeave: function(origin, destination, direction){
+				//                 console.log("Leaving section" + origin.index);
+				// 				var loadedSection = this;
+				// 				if(origin.index == 1 && direction == 'down'){
+				// 					('#section5 h2').toggleClass('on');}, 500);}      
+				// });
+				//모달창닫기
+				$('.modal a').click(function () {
+					$('.modal').hide();
+				});
+
+				var swiper = new Swiper(".mySwiper", {
+					effect: "coverflow",
+					grabCursor: true,
+					centeredSlides: true,
+					slidesPerView: "auto",
+					coverflowEffect: {
+						rotate: 50,
+						stretch: 0,
+						depth: 100,
+						modifier: 1,
+						slideShadows: true,
+						mousewheel: true,
+
+					},
+					keyboard: {
+						enabled: true,
+					},
+					pagination: {
+						el: ".swiper-pagination",
+						clickable: true,
+					},
+				});
+			</script>
+		</body>
+
+		</html>

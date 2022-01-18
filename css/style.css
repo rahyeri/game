@@ -1,0 +1,586 @@
+/*
+http://rahyeri.dothome.co.kr/game의 css입니다
+copyright(c) rahyeri 
+최종수정일 : 22.01.08
+*/
+@charset "utf-8";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Outfit:wght@500;800&family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&display=swap');
+
+@font-face {
+    font-family: 'GongGothicMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+#menu li:first-child {
+    width: 30%;
+}
+
+#menu h1 {
+    width: 30%;
+    text-align: left;
+
+}
+
+#menu h1 img {
+    height: 60px;
+    padding-left: 30px;
+    transform: translateY(-20px);
+}
+
+#menu li a {
+    font-size: 16px;
+    color: #fff;
+}
+
+#menu li a:hover {
+    color: #fd3318;
+}
+
+/* 스토어 */
+#store {
+    position: fixed;
+    top: 10px;
+    right: 60px;
+    color: #fff;
+    text-align: center;
+    width: 50px;
+}
+
+#store:hover a {
+    color: #fd3318;
+}
+
+#store a {
+    color: #fff;
+}
+
+#store img {
+    width: 50px;
+}
+
+.s0,
+#section0 h2,
+.s0txt,
+#scroll_wrap {
+    transform: translateY(390px);
+}
+
+.s0 {
+    font-size: 40px;
+    color: #fff;
+    padding-bottom: 30px;
+    font-family: 'Outfit', sans-serif;
+}
+
+#section0 h2 {
+    font-size: 70px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 40px;
+    padding-bottom: 30px;
+}
+
+#section0 .move {
+    position: relative;
+}
+
+.s0txt {
+    font-size: 20px;
+    color: #fff;
+    line-height: 30px;
+
+}
+
+#scroll_wrap {
+    padding-top: 150px;
+    width: 90px;
+    height: 90px;
+    margin: 0 auto;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.945);
+    line-height: 2;
+
+}
+
+#scroll {
+    margin: 0 auto;
+    width: 25px;
+    height: 50px;
+    border: 2px solid rgba(255, 255, 255, 0.829);
+    border-radius: 40px;
+}
+
+#box04 {
+    width: 22px;
+    height: 20px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.842);
+    animation-name: move_circle;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+/* 애니메이션 작성하기 */
+@keyframes move_circle {
+    0% {
+        top: -0px;
+    }
+
+    25% {
+        top: 30px;
+    }
+
+    50% {
+        top: 30px;
+    }
+
+    75% {
+        top: 30px;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+/* 섹션22 슬라이드 */
+#section1 {
+    position: relative;
+}
+
+#slide1 .s1_txt {
+    display: block;
+    font-size: 26px;
+    line-height: 2;
+    color: #fff;
+    font-family: 'GongGothicMedium';
+    position: absolute;
+    top: 454px;
+    left: 370px;
+}
+
+#slide1 .s1_txt:hover {
+    animation: flash;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+/* 슬라이드2 */
+#slide2 h2,
+#slide3 h2 {
+    transform: translateY(0px);
+}
+
+/* 슬라이드3 */
+
+#slide2 a,
+#slide3 a {
+    display: block;
+    width: 150px;
+    height: 50px;
+    margin: 0 auto;
+    line-height: 50px;
+    font-size: 14px;
+    color: #fff;
+    border: 1px solid #fff;
+    transition: 0.6s;
+    /* position:absolute; bottom:10%; left:30%; z-index:100; */
+}
+
+#slide2 a:hover,
+#slide3 a:hover {
+    background: rgba(255, 255, 255, 0.829);
+    color: #0a0a66;
+    font-weight: bold;
+}
+
+/* 섹션 3 이벤트*/
+#section2 h2 {
+    font-family: outfit, sans-serif;
+    margin-top: 50px;
+}
+
+#section2 ul {
+    /* background-color:rgba(255,255,255,0.7); */
+    width: 100%;
+    max-width: 1100px;
+    margin: 50px auto;
+    height: 570px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 30px;
+}
+
+#section2 ul > li {
+    background-color: rgba(255, 255, 255, 0.8);
+    position: relative;
+    top: 400px;
+    /* border-radius:30px; */
+}
+
+#section2 ul > li h3 {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 2;
+    color: #0a0a66;
+}
+
+#section2 ul > li p {
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: bold;
+    color: #222;
+}
+
+#section2 ul>li p:first-of-type {
+    line-height: 2;
+    margin-bottom: 10px;
+    color: #111;
+}
+
+#section2 ul > li a {
+    margin: 0 auto;
+
+}
+
+#section2 ul > li img {
+    width: 335px;
+    object-fit: cover;
+    margin: 5px 0 20px;
+    transition: 0.5s;
+}
+
+#section2 ul>li img:hover {
+    opacity: 0.7;
+}
+
+#section2 ul > li .btn {
+    display: block;
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    border: 1px solid rgb(5, 0, 78);
+    color: rgb(5, 0, 78);
+    margin: 20px auto;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+#section2 ul>li .btn:hover {
+    background-color: rgb(5, 0, 78);
+    color: #fff;
+    font-weight: normal;
+}
+
+.mySwiper {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* 섹션 3 이전 출시 제품들 갤러리 */
+#section3 h2 {
+    font-family: outfit, sans-serif;
+    padding: 50px 0;
+}
+
+#section3 h2 span {
+    display: block;
+    margin: 30px 0 0;
+    font-size: 20px;
+}
+
+
+/* 섹션4 */
+#section4 h2 {
+    color: #fff;
+    font-family: outfit, sans-serif;
+    padding: 50px 0 0;
+}
+
+#section4 ul {
+    border-top: 1px solid #555;
+    border-bottom: 1px solid #555;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 80%;
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+#section4 ul > li {
+    font-size: 14px;
+}
+
+#section4 ul > li > a {
+    line-height: 1.2;
+    text-align: left;
+    width: 100%;
+    height: 30px;
+    padding-top: 10px;
+    border-bottom: 1px solid #ccc;
+    display: block;
+    font-weight: 600;
+
+}
+
+.btn {
+    text-align: center;
+    display: block;
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    border: 1px solid rgb(5, 0, 78);
+    color: rgb(5, 0, 78);
+    margin: 10px auto;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    background-color: rgb(5, 0, 78);
+    color: #fff;
+    font-weight: normal;
+}
+
+i.fa-angle-down {
+    float: right;
+    font-size: 17px;
+    padding-right: 20px;
+}
+
+#section4 ul > li > p {
+    text-align: left;
+    background-color: rgb(241, 241, 241);
+    line-height: 1.6;
+    font-size: 13px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: none;
+}
+
+#section4 ul>li>a:hover {
+    background-color: #fff;
+    color: #0a0a66;
+}
+
+#section4 ul > li > a::BEFORE {
+    content: "Q";
+    margin-right: 13px;
+    margin-left: 15px;
+}
+
+#section4 ul > li p::BEFORE {
+    content: "A -";
+    margin-right: 5px;
+    /* margin-left:-15px; */
+    font-size: 14px;
+}
+
+.act {
+    transform: rotate(180deg);
+    position: relative;
+    left: -19px;
+}
+
+.act1 {
+    font-weight: bold;
+    background-color: #fff;
+    color: #0a0a66;
+}
+
+.s4_2 {
+    display: flex;
+    width: 80%;
+    max-width: 1000px;
+    margin: 50px auto;
+    height: 140px;
+    justify-content: space-between;
+}
+
+.s4_box {
+    width: 45%;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 12px;
+    color: #333;
+    /* margin-bottom:400px; */
+    clear: both;
+}
+
+.s4_box img {
+    float: right;
+    width: 60px;
+    transform: translateY(-60px);
+}
+
+.s4_box h3 {
+    font-size: 20px;
+    color: #222;
+}
+
+.s4_box p {
+    line-height: 1.4;
+}
+
+.s4_box a {
+    display: block;
+    line-height: 2;
+    color: #0a0a66;
+}
+
+.s4_box.first a {
+    padding-top: 4px;
+}
+
+.s4_box:hover {
+    background-color: #fff;
+}
+
+.s4_box:hover h3 {
+    color: #0a0a66;
+}
+
+.s4_box a:hover {
+    text-decoration: underline;
+}
+
+.fa-angle-double-right {
+    transition: 0.5s;
+}
+
+.s4_box a:hover .fa-angle-double-right {
+    transform: translateX(10px);
+}
+
+/* 섹션5 */
+#play {
+    font-family: 'Outfit', sans-serif;
+    font-size: 110px;
+}
+
+#play {
+    transform: translateX(-50%);
+    text-align: left;
+    width: 90%;
+    margin-left: 100px;
+    color: rgb(36, 36, 36);
+    letter-spacing: 30px;
+    transition: 1s;
+    padding-top: 70px;
+}
+
+#winner {
+    font-size: 120px;
+    font-family: 'Outfit', sans-serif;
+    color: #0a0a0a;
+    height: 480px;
+    font-weight: bold;
+    transform: translateX(1000px);
+    transition: 2s;
+    padding-top: 40px;
+    letter-spacing: 5px;
+    opacity: 0.2;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+}
+
+footer a:hover {
+    color: #fd3318;
+}
+
+footer,
+address {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+footer ol {
+    display: flex;
+    justify-content: space-evenly;
+    /* width:40%; */
+    height: 80px;
+    align-items: flex-end;
+    padding-left: 60px;
+}
+
+footer ol a {
+    color: #fff;
+    line-height: 80px;
+    display: block;
+}
+
+.sns a {
+    color: #fff;
+    font-size: 16px;
+    padding: 30px;
+}
+
+select {
+    border: none;
+    background: rgba(0, 0, 0, 0.5);
+    outline: none;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    width: 120px;
+    height: 35px;
+}
+
+footer > address {
+    grid-area: 2 / 1/3/4;
+    color: #ccc;
+    text-align: center;
+    line-height: 1.5;
+    padding-bottom: 30px;
+}
+/* 모달창 */
+.modal {
+    position: fixed;
+    z-index: 10000000000000;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    top: 0;
+    left: 0;
+}
+
+.modal img {
+    width: 60%;
+    padding-top: 50px;
+}
+
+.modal a {
+    position: relative;
+    left: 20%;
+    padding: 10px;
+    top: 20px;
+    display: block;
+    font-size: 30px;
+    color: #fff;
+}
+
+.modal p {
+    color: #fff;
+    font-size: 12px;
+    line-height: 1.5;
+}
